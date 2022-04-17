@@ -1,0 +1,140 @@
+- var css_path = '.'
+
+doctype html
+html(lang="ja")
+    head(prefix="og: http://ogp.me/ns#")
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title タイトル
+        meta(name="description" content="説明")
+        //- OGP
+        meta(property="og:type" content="website")
+        meta(property="og:url" content="https://site-url.com")
+        meta(property="og:title" content="タイトル")
+        meta(property="og:image" content="https://site-url.com/img/ogp.png")
+        meta(property="og:description" content="説明")
+        meta(property="og:locale" content="ja_JP")
+        meta(property="og:site_name" content="サイトの名前")
+        //- Twitterカード　 "summary_large_image" or "summary"
+        meta(name="twitter:card" content="summary_large_image") 
+        meta(name="twitter:site" content="@YourTwitterAccount")
+        //- Windows用タイル設定
+        meta(name="msapplication-TileImage" content="https://site-url.com/mstile.png")
+        meta(name="msapplication-TileColor" content="#000000")
+        //- Google Fonts
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700&family=Yomogi&display=swap")
+        //- リセットCSS "reset.css" or "normalize.css"
+        link(rel="stylesheet" href= css_path + "/css/reset.css")
+        link(rel="stylesheet" href= css_path + "/css/style.css" type="text/css")
+    body.global-layout
+        header.header.global-layout__header
+            .header__inner
+                h1: a.header__title(href="#") SiteName
+                nav: ul.global-nav
+                    li: a.global-nav__link(href="#") HOME
+                    li: a.global-nav__link(href="#") ABOUT
+                    li: a.global-nav__link(href="#") WORKS
+                    li: a.global-nav__link(href="#") CONTACT
+            // /.header__inner
+        nav.breadcrumb.global-layout__breadcrumb
+            ol.breadcrumb__inner
+                li: a.breadcrumb__link(href="#") ホーム
+                li: a.breadcrumb__link(href="#") npm
+                li: a.breadcrumb__link(href="#") pugとSassを監視してコンパイルするより長いタイトル
+        main.main.global-layout__main.contents-layout
+            article.article.contents-layout__article
+                .article__header
+                    .postInfo
+                            .postInfo__item
+                                span.postInfo__title cat.
+                                span.postInfo__text npm
+                            .postInfo__item
+                                span.postInfo__title Date
+                                time.postInfo__text(datetime="2020-12-27") 2020-12-27
+                    h1 pugとSassを監視してコンパイルするより長いタイトル
+                .article__chapter.chapter-wrapper.widget-card
+                    h2.widget-card__title 目次
+                    ol.chapter.side__lists
+                        li: a.side__link(href="#h2-01") h2 見出し
+                        ol.chapter
+                            li: a.side__link(href="#h3-01") h3 見出し
+                        li: a.side__link(href="#h2-02") コードボックス
+                        li: a.side__link(href="#h2-03") インラインコード
+                h2#h2-01 h2 見出し
+                p あのイーハトヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモーリオ市、郊外のぎらぎら光る草の波。
+                    | #[br]ABCDEFGHIJKLMabcdefghijklm1234567890
+                h3#h3-01 h3 見出し
+                p あのイーハトヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモーリオ市、郊外のぎらぎら光る草の波。
+                    | #[br]ABCDEFGHIJKLMabcdefghijklm1234567890
+                h4 h4 見出し
+                p あのイーハトヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモーリオ市、郊外のぎらぎら光る草の波。
+                    | #[br]ABCDEFGHIJKLMabcdefghijklm1234567890
+                h5 h5 見出し
+                p あのイーハトヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモーリオ市、郊外のぎらぎら光る草の波。
+                    | #[br]ABCDEFGHIJKLMabcdefghijklm1234567890
+                h6 h6 見出し
+                p あのイーハトヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモーリオ市、郊外のぎらぎら光る草の波。
+                    | #[br]ABCDEFGHIJKLMabcdefghijklm1234567890
+                h2 h2 見出し
+                p あのイーハトヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモーリオ市、郊外のぎらぎら光る草の波。
+                    | #[br]ABCDEFGHIJKLMabcdefghijklm1234567890
+                h3 h3 見出し
+                p あのイーハトヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモーリオ市、郊外のぎらぎら光る草の波。
+                    | #[br]ABCDEFGHIJKLMabcdefghijklm1234567890
+                h4 h4 見出し
+                p あのイーハトヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモーリオ市、郊外のぎらぎら光る草の波。
+                    | #[br]ABCDEFGHIJKLMabcdefghijklm1234567890
+                h5 h5 見出し
+                p あのイーハトヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモーリオ市、郊外のぎらぎら光る草の波。
+                    | #[br]ABCDEFGHIJKLMabcdefghijklm1234567890
+                h6 h6 見出し
+                p あのイーハトヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモーリオ市、郊外のぎらぎら光る草の波。
+                    | #[br]ABCDEFGHIJKLMabcdefghijklm1234567890
+        aside.side.global-layout__side.side-layout
+            .side__item.widget-card
+                h2.widget-card__title カテゴリ
+                ul.categories-widget.side__lists.categories-layout
+                    li
+                        a(href="#").categories__link
+                            img.categories__img(src= css_path + "/img/SassIcon.png")
+                            span.categories__ttl Sass
+                    li
+                        a(href="#").categories__link
+                            img.categories__img(src= css_path + "/img/pugIcon.png")
+                            span.categories__ttl pug
+                    li
+                        a(href="#").categories__link
+                            img.categories__img(src= css_path + "/img/npmIcon.png")
+                            span.categories__ttl npm
+            .side__item.related-widget.widget-card
+                h2.widget-card__title 同じカテゴリの記事
+                ul.menuPosts.side__lists
+                    li: a.side__link(href="#") npmをインストールする
+                    li: a.side__link(href="#") severity vulnerability
+                    li: a.side__link(href="#") pugとSassを監視してコンパイルするより長いタイトル
+                    li: a.side__link(href="#") Firebaseを使う
+                    li: a.side__link(href="#") gitを使う
+            .side__item.chapter-widget.widget-card.widget-card__chapter
+                h2.widget-card__title 目次
+                ol.chapter.side__lists
+                    li: a.side__link(href="#h2-01") h2 見出し
+                    ol.chapter
+                        li: a.side__link(href="#h3-01") h3 見出し
+                    li: a.side__link(href="#h2-02") コードボックス
+                    li: a.side__link(href="#h2-03") インラインコード
+        footer.footer.global-layout__footer
+        //- header.header
+        //-     .header__inner
+        //- .content.content--has-column
+        //-     main.content__main
+        //-         article 
+        //-     aside.content__side
+        //-         ul 
+        //-             li: a(href="#") ホーム
+        //-             li: a(href="#") フォロー新着
+        //-             li: a(href="#") ディスカバリー
+        //-             li: a(href="#") フィード
+        //- footer.footer 
+        //-     .footer__inner
+        script(src= css_path + "/js/script.js")

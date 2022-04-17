@@ -1,0 +1,49 @@
+// = = = = = header, footer = = = = =
+
+.header,.footer,.content__main,.content__side
+    background-color: #fff // 仮
+
+.header__inner,.footer__inner
+    border: 1px solid #aaa // 仮
+    max-width: 980px
+    padding-right: 20px
+    padding-left: 20px
+    margin-right: auto
+    margin-left: auto
+    height: 100px // 仮
+
+// = = = = = content = = = = =
+
+.content
+    max-width: 980px // 940px + padding 20px * 2
+    padding: 60px 20px // 仮
+    margin-right: auto
+    margin-left: auto
+
+.content--has-column
+    display: flex
+    justify-content: space-between
+
+.content__main,.content__side
+    height: calc(100vh - 320px) // 仮
+
+.content__main
+    flex-grow: 1
+    margin-right: 2.04081% // 約20px
+
+.content__side
+    flex-basis: 300px
+    flex-shrink: 0
+
+// スマホ
+@media screen and #{$mq-xs}
+    .content--has-column
+        flex-direction: column
+    .content__main
+        margin-right: 0
+        margin-bottom: 60px // 仮
+        flex-grow: 0
+    .content__side
+        flex-basis: auto
+
+        

@@ -1,0 +1,43 @@
+// = = = = = メディアクエリ = = = = =
+
+
+$mq-xs: "(max-width: 340px)"
+$mq-sm: "(max-width: 480px)"
+$mq-md: "(max-width: 660px)"
+$mq-lg: "(max-width: 980px)"
+    
+
+// = = = = = 変数 = = = = =
+
+$backColor: #ffffff
+$textColor: #333
+$primary-color: #aaa
+$secondary-color: #ccc
+$noteColor: #106EB0
+$color1: #95e5f1
+$color3: #F1D995
+
+// Font
+=sans
+    font-family: 'Noto Sans JP', sans-serif
+=handwriting
+    font-family: 'Yomogi', sans-serif
+
+=fontSize($pc-size,$sp-size)
+    font-size: $pc-size
+    @media #{$mq-sm}
+        font-size: $sp-size
+
+
+=responsiveSize($name,$pc-size,$sp-size)
+    #{$name}: $pc-size
+    @media #{$mq-xs}
+        #{$name}: $sp-size
+
+=calcMargin($selectorName:"margin-top",$baseMargin:20px,$FontSize:1.4rem,$LineHeight:1.7) 
+    #{$selectorName}: calc(#{$baseMargin} - (((#{$FontSize} * #{$LineHeight}) - #{$FontSize}) / 2))
+
+=responsiveCalcMargin($selectorName:"margin-top",$pcMargin:20px,$spMargin:$pcMargin,$pcFontSize: 1.4rem,$spFontSize: 1.4rem,$LineHeight:1.7)
+    #{$selectorName}: calc(#{$pcMargin} - (((#{$pcFontSize} * #{$LineHeight}) - #{$pcFontSize}) / 2))
+    @media #{$mq-sm}
+        #{$selectorName}: calc(#{$spMargin} - (((#{$spFontSize} * #{$LineHeight}) - #{$spFontSize}) / 2))
