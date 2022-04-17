@@ -5,8 +5,8 @@
   "main": "index.html",
   "scripts": {
     "start": "run-p watch/*",
-    "sass": "sass --no-source-map source/sass:doc/css",
-    "pug": "pug ./source/pug --out ./doc --pretty",
+    "sass": "sass --no-source-map source/sass:docs/css",
+    "pug": "pug ./source/pug --out ./docs --pretty",
     "watch/sass": "watch 'npm run sass' ./source/sass",
     "watch/pug": "watch 'npm run pug' ./source/pug"
   },
